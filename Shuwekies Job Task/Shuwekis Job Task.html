@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="ShuwekisJobTask.css" />
+    <title>Shuwekis Job Task</title>
+  </head>
+  <body>
+    <!--First Shape-->
+    <div id="flexContainer">
+      <div id="mainPurple">
+        <div id="gridContainer">
+          <div class="emptyDiv"></div>
+          <div id="firstYellow"></div>
+          <div class="emptyDiv"></div>
+          <div class="bottomYellow"></div>
+          <div class="emptyDiv"></div>
+          <div class="bottomYellow"></div>
+        </div>
+      </div>
+      <!--Second Shape-->
+      <div id="mainBlue">
+        <div id="rectangle">
+          <div id="outterCircle">
+            <div id="midCircle">
+              <div id="innerCircle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Buttons-->
+    <div id="btnContainer">
+      <button id="firstShapeBtn">Hide</button>
+      <button id="secondShapeBtn">Hide</button>
+    </div>
+    <!-- jquery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script>
+      //Declaring variables
+      let shape1 = $("#gridContainer");
+      let shape2 = $("#rectangle");
+      let btn1 = $("#firstShapeBtn");
+      let btn2 = $("#secondShapeBtn");
+
+      //First Button
+      btn1.click(function () {
+        if (shape1.css("visibility") == "hidden") {
+          shape1.css("visibility", "unset");
+          btn1.text("Hide");
+        } else {
+          shape1.css("visibility", "hidden");
+          btn1.text("Show");
+        }
+      });
+
+      //Second Button
+      btn2.click(function () {
+        if (shape2.css("visibility") == "hidden") {
+          shape2.css("visibility", "unset");
+          btn2.text("Hide");
+        } else {
+          shape2.css("visibility", "hidden");
+          btn2.text("Show");
+        }
+      });
+    </script>
+  </body>
+</html>

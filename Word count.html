@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Word count</title>
+  </head>
+  <body>
+    <input type="text" id="text" />
+    <!-- jquery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script>
+      $(input).keypress(function () {
+        var countWords = $("input").val();
+        var n = 0;
+        for (i = 0; i < 9; i++) {
+          n = countWords.indexOf(" ", n);
+          n++;
+        }
+        alert(countWords.substring(0, n));
+      });
+    </script>
+  </body>
+</html>
